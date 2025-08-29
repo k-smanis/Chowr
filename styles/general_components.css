@@ -34,7 +34,9 @@
   --color-bg-dark: #f5d3b8;
   --color-text-main: #222222;
   --color-text-muted: #777;
-  --color-accent: #ffd43b;
+  --color-vegetarian: #51cf66;
+  --color-vegan: #94d82d;
+  --color-paleo: #ffd43b;
 
   /* Border Radius */
   --radius-sm: 0.4rem;
@@ -74,10 +76,13 @@ body {
   color: var(--color-bg-grey);
 }
 
+strong {
+  font-weight: 500;
+}
 /* GENERAL COMPONENTS */
 .container {
   max-width: 120rem;
-  padding: 0 var(--space-2xl);
+  /* padding: 0 var(--space-2xl); */
   margin: 0 auto;
 }
 
@@ -104,7 +109,19 @@ body {
 }
 
 .margin-right-sm {
-  margin-right: 1.6rem !important;
+  margin-right: var(--space-sm) !important;
+}
+
+.margin-bottom-2xl {
+  margin-bottom: var(--space-2xl) !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.grid--column-gap-xs {
+  column-gap: var(--space-xs);
 }
 
 .header-primary,
@@ -183,4 +200,22 @@ body {
 .btn--secondary:active {
   background-color: var(--color-bg-dark);
   color: var(--color-text-main);
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: var(--space-xs);
+  transition: all 300ms;
+}
+
+.link:hover,
+.link:active {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid transparent;
 }
