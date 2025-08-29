@@ -7,7 +7,7 @@
   --font-size-xl: 2.4rem; /* ~24px */
   --font-size-2xl: 4.2rem; /* ~32px */
   --font-size-3xl: 4.8rem; /* ~48px */
-  --font-size-4xl: 9.6rem; /* ~96px */
+  --font-size-4xl: 9rem; /* ~96px */
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -92,6 +92,10 @@ strong {
   column-gap: var(--space-2xl);
 }
 
+.grid:not(:last-child) {
+  margin-bottom: var(--space-3xl);
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -108,8 +112,16 @@ strong {
   align-items: center;
 }
 
+.grid--no-gap {
+  gap: 0;
+}
+
 .margin-right-sm {
   margin-right: var(--space-sm) !important;
+}
+
+.margin-bottom-xl {
+  margin-bottom: var(--space-xl) !important;
 }
 
 .margin-bottom-2xl {
