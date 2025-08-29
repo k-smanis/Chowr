@@ -1,0 +1,186 @@
+:root {
+  /* Typography Scale (adjusted for 1rem = 10px) */
+  --font-size-xs: 1.2rem; /* ~12px */
+  --font-size-sm: 1.4rem; /* ~14px */
+  --font-size-md: 1.6rem; /* ~16px */
+  --font-size-lg: 2rem; /* ~20px */
+  --font-size-xl: 2.4rem; /* ~24px */
+  --font-size-2xl: 4.2rem; /* ~32px */
+  --font-size-3xl: 4.8rem; /* ~48px */
+  --font-size-4xl: 9.6rem; /* ~96px */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.55;
+  --line-height-loose: 1.75;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.05rem;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08rem;
+
+  /* Color Palette */
+  --color-primary: #e67e22;
+  --color-primary-dark: #d38037;
+  --color-bg-light: #fdf2e9;
+  --color-bg-regular: #ffe5d0;
+  --color-bg-dark: #f5d3b8;
+  --color-text-main: #222222;
+  --color-text-muted: #777;
+  --color-accent: #ffd43b;
+
+  /* Border Radius */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.2rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+
+  /* Whitespace / Spacing Scale */
+  --space-xs: 0.4rem; /* 4px */
+  --space-sm: 0.8rem; /* 8px */
+  --space-md: 1.6rem; /* 16px */
+  --space-lg: 2.4rem; /* 24px */
+  --space-xl: 3.2rem; /* 32px */
+  --space-2xl: 4.8rem; /* 48px */
+  --space-3xl: 9.6rem; /* 96px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-bg-grey);
+}
+
+/* GENERAL COMPONENTS */
+.container {
+  max-width: 120rem;
+  padding: 0 var(--space-2xl);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  row-gap: var(--space-3xl);
+  column-gap: var(--space-2xl);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.header-primary,
+.header-secondary,
+.header-tertiary {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: 3.2rem;
+}
+
+.header-primary {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2xl);
+}
+
+.header-secondary {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-3xl);
+}
+
+.header-tertiary {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-xl);
+  /* letter-spacing: var(--letter-spacing-normal); */
+}
+
+.subheader {
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  letter-spacing: var(--letter-spacing-wide);
+  /* margin-bottom: 3.2rem; */
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  text-decoration: none;
+
+  transition: all 300ms;
+
+  font-weight: var(--font-weight-medium);
+}
+
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: var(--color-primary-dark);
+  color: white;
+  cursor: pointer;
+}
+
+.btn--secondary:link,
+.btn--secondary:visited {
+  background-color: var(--color-bg-regular);
+  color: var(--color-text-main);
+}
+
+.btn--secondary:hover,
+.btn--secondary:active {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main);
+}
