@@ -58,6 +58,7 @@
   --space-xl: 3.2rem; /* 32px */
   --space-2xl: 4.8rem; /* 48px */
   --space-3xl: 9.6rem; /* 96px */
+  --space-4xl: 14.2rem; /* 96px */
 }
 
 * {
@@ -68,7 +69,7 @@
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem rgb(0, 166, 255);
+  box-shadow: 0 0 0 0.1rem rgb(0, 166, 255);
 }
 
 html {
@@ -114,6 +115,10 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
@@ -128,6 +133,14 @@ strong {
 
 .margin-bottom-xl {
   margin-bottom: var(--space-xl) !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: var(--space-md) !important;
+}
+
+.margin-bottom-lg {
+  margin-bottom: var(--space-lg) !important;
 }
 
 .margin-bottom-2xl {
