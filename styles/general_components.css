@@ -37,6 +37,7 @@
   --color-vegetarian: #51cf66;
   --color-vegan: #94d82d;
   --color-paleo: #ffd43b;
+  --color-brown: #3f230a;
 
   /* Border Radius */
   --radius-sm: 0.4rem;
@@ -63,6 +64,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(0, 166, 255);
 }
 
 html {
@@ -175,6 +181,7 @@ strong {
   /* margin-bottom: 3.2rem; */
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -187,6 +194,10 @@ strong {
   transition: all 300ms;
 
   font-weight: var(--font-weight-medium);
+
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
 }
 
 .btn--primary:link,
@@ -212,6 +223,32 @@ strong {
 .btn--secondary:active {
   background-color: var(--color-bg-dark);
   color: var(--color-text-main);
+}
+
+.btn--form {
+  font-family: inherit;
+  width: 90%;
+  background-color: var(--color-brown);
+  color: var(--color-bg-light);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-sm);
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn--form:hover {
+  background-color: var(--color-bg-light);
+  color: var(--color-brown);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-sm);
+  font-size: var(--font-size-md);
+
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .link:link,

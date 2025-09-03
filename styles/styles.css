@@ -516,6 +516,108 @@
   border-radius: var(--radius-full);
   padding: var(--space-sm);
 }
+
 /* CTA */
+.section-cta {
+  padding: var(--space-3xl) 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(255, 168, 17),
+    var(--color-primary-dark)
+  );
+  overflow: hidden;
+
+  height: 50rem;
+}
+
+.cta-form :is(input, select, button):focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(0, 166, 255);
+}
+
+.cta .header-secondary {
+  color: var(--color-brown);
+  margin-bottom: var(--space-2xl);
+}
+
+.cta-text-box {
+  color: var(--color-brown);
+  padding: var(--space-xl) var(--space-2xl) var(--space-md) var(--space-2xl);
+}
+
+.cta-text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--space-2xl);
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 168, 17, 0.1),
+      rgba(255, 162, 0, 0.5)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  padding-top: var(--space-md);
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--space-lg);
+  row-gap: var(--space-xl);
+}
+
+.cta-form label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+}
+.cta-form input {
+  width: 90%;
+  padding: var(--space-sm);
+  font-size: var(--font-size-md);
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: var(--color-bg-light);
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+}
+
+.cta-form input::placeholder {
+  color: #bbb;
+}
+
+.cta-form select {
+  font-family: inherit;
+  color: inherit;
+  width: 90%;
+  padding: var(--space-sm);
+  font-size: var(--font-size-md);
+  border: none;
+  background-color: var(--color-bg-light);
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.cta-form button {
+  align-self: end;
+}
 
 /* FOOTER */
