@@ -207,6 +207,7 @@ strong {
   transition: all 300ms;
 
   font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
 
   cursor: pointer;
   border: none;
