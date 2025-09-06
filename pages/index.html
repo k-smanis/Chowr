@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="../styles/general_components.css" />
+    <link rel="stylesheet" href="../styles/queries.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -23,11 +24,12 @@
   </head>
   <body>
     <header class="header">
+      <!-- <header class="headers nav-open"> -->
       <a href="#">
         <img class="logo" alt="Chowr Logo" src="../img/chowr-logo.png" />
       </a>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
+      <nav class="header-nav">
+        <ul class="main-nav">
           <li><a href="#" class="btn main-nav-link">How it works</a></li>
           <li><a href="#" class="btn main-nav-link">Meals</a></li>
           <li><a href="#" class="btn main-nav-link">Testimonials</a></li>
@@ -37,6 +39,11 @@
           </li>
         </ul>
       </nav>
+
+      <button class="mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -113,7 +120,6 @@
             <img src="../img/logos/forbes.png" alt="Forbes logo" />
             <img src="../img/logos/usa-today.png" alt="USA Today logo" />
           </div>
-          "
         </div>
       </section>
 
@@ -191,7 +197,7 @@
         </div>
 
         <div
-          class="container grid grid--3-cols margin-bottom-2xl grid--column-gap-xs"
+          class="container grid grid--3-cols grid--center-h margin-bottom-2xl grid--column-gap-xs"
         >
           <div class="meal">
             <img
@@ -456,7 +462,7 @@
           </h2>
         </div>
 
-        <div class="container grid grid--2-cols grid--no-gap margin-bottom-xl">
+        <div class="container grid grid--2-cols margin-bottom-xl">
           <div class="pricing-plan">
             <header class="plan-header">
               <p class="plan-name">Starter</p>
@@ -559,7 +565,7 @@
           </aside>
         </div>
 
-        <div class="container grid grid--4-cols">
+        <div class="container grid grid--4-cols padding-sides-2xl">
           <div class="feature">
             <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
             <p class="feature-title">Never cook again!</p>
@@ -607,7 +613,7 @@
               </p>
 
               <form class="cta-form" action="#" method="POST">
-                <div>
+                <div class="form-customer-name-field">
                   <label for="form-name">Full Name</label>
                   <input
                     type="text"
@@ -616,7 +622,7 @@
                     required
                   />
                 </div>
-                <div>
+                <div class="form-customer-email-field">
                   <label for="form-email">Email</label>
                   <input
                     type="email"
@@ -625,9 +631,9 @@
                     required
                   />
                 </div>
-                <div>
+                <div class="form-customer-source-field">
                   <label for="form-customer-source"
-                    >Where did you hear from us?</label
+                    >Where did you hear about us?</label
                   >
                   <select id="form-customer-source" required>
                     <option value="friends_and_family">Friends & Family</option>
@@ -650,7 +656,7 @@
       </section>
 
       <section class="section-footer">
-        <div class="container grid grid--footer">
+        <div class="container grid grid--footer padding-sides-2xl">
           <div class="logo-col">
             <a href="#" class="footer-logo"
               ><img class="logo" alt="Chowr Logo" src="../img/chowr-logo.png"

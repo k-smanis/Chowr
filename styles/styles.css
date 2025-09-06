@@ -5,7 +5,6 @@
   justify-content: space-between;
   background-color: var(--color-bg-light);
   padding: var(--space-md) var(--space-2xl);
-  width: 100%;
   border-bottom: 5px solid transparent;
   border-image: linear-gradient(
       to right,
@@ -17,16 +16,22 @@
   top: 0;
   z-index: 1000;
   height: auto;
+  width: 100%;
 }
 
 .logo {
   height: var(--space-lg);
 }
 
-.main-nav-list {
+/* MAIN NAV */
+.header-nav {
+  min-width: 0;
+}
+
+.main-nav {
   list-style: none;
   display: flex;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
   align-items: center;
 }
 
@@ -63,6 +68,24 @@
   color: white;
 }
 
+/* MOBILE NAV */
+.mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: var(--font-size-3xl);
+  width: var(--font-size-3xl);
+  color: var(--color-primary);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* HERO */
 .section-hero {
   background-color: var(--color-bg-light);
@@ -71,11 +94,9 @@
 .hero {
   max-width: 150rem;
   margin: 0 auto;
-  /* height: 100vh; */
   min-height: 91.5vh;
   padding: var(--space-xl) var(--space-xl);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
   gap: var(--space-3xl);
 }
@@ -145,11 +166,15 @@
 .logos {
   display: flex;
   height: var(--space-xl);
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: var(--space-sm);
 }
 
 .logos img {
-  height: 90%;
+  height: 80%;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
   filter: brightness(0);
   opacity: 50%;
 }
@@ -336,14 +361,16 @@
   background-color: var(--color-bg-light);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* align-items: start; */
 }
 
 .testimonials {
   display: grid;
   gap: var(--space-3xl);
-  grid-template-columns: repeat(2, minmax(0, 30rem));
-  width: max-content; /* hug content */
-  justify-self: start; /* stop stretching */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  max-width: 100%;
+  width: 100%;
 }
 
 .testimonials-container {
@@ -376,16 +403,18 @@
 
 .gallery {
   justify-self: center;
+  align-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 25rem);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   padding: var(--space-3xl) var(--space-3xl) var(--space-3xl) var(--space-xl);
-  width: max-content;
-  height: max-content;
+
+  max-width: 100%;
+  width: 100%;
 }
 
 .gallery-item {
-  width: 25rem;
+  width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   transition: all 0.4s;
@@ -533,8 +562,9 @@
     var(--color-primary-dark)
   );
   overflow: hidden;
+  height: max-content;
 
-  height: 50rem;
+  /* width: 80rem; */
 }
 
 .cta-form :is(input, select, button):focus {
@@ -572,9 +602,12 @@
 .cta-form {
   display: grid;
   padding-top: var(--space-md);
+  padding-bottom: var(--space-xl);
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   column-gap: var(--space-lg);
   row-gap: var(--space-xl);
+  min-height: 0;
 }
 
 .cta-form label {
@@ -584,7 +617,7 @@
   margin-bottom: var(--space-sm);
 }
 .cta-form input {
-  width: 90%;
+  width: 100%;
   padding: var(--space-sm);
   font-size: var(--font-size-md);
   font-family: inherit;
@@ -603,7 +636,7 @@
 .cta-form select {
   font-family: inherit;
   color: inherit;
-  width: 90%;
+  width: 100%;
   padding: var(--space-sm);
   font-size: var(--font-size-md);
   border: none;
@@ -620,14 +653,21 @@
   align-self: end;
 }
 
+.form-customer-source-field {
+  grid-row: 2;
+  grid-column: 1/3;
+}
+
 /* FOOTER */
 .section-footer {
   padding: var(--space-3xl) 0;
   background-color: var(--color-bg-light);
+  /* width: max-content; */
 }
 
 .grid--footer {
   grid-template-columns: 4fr 4fr 3fr 3fr 3fr;
+  column-gap: 15rem;
 }
 
 .logo-col {
@@ -663,6 +703,7 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
   margin-bottom: var(--space-lg);
+  width: 100%;
 }
 
 .contacts {
@@ -693,4 +734,16 @@
 .footer-link:active,
 .footer-link:hover {
   color: var(--color-text-main);
+}
+
+.logo-col {
+  min-width: 0%;
+}
+
+.nav-col {
+  min-width: 0%;
+}
+
+.address-col {
+  min-width: 0%;
 }
