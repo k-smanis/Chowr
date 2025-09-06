@@ -74,6 +74,7 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-gutter: stable both-edges;
 }
 
 body {
@@ -81,6 +82,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--color-bg-grey);
+  overflow-x: hidden;
 }
 
 strong {
@@ -89,8 +91,9 @@ strong {
 /* GENERAL COMPONENTS */
 .container {
   max-width: 120rem;
-  /* padding: 0 var(--space-2xl); */
   margin: 0 auto;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
 }
 
 .grid {
@@ -123,8 +126,13 @@ strong {
   align-items: center;
 }
 
-.grid--no-gap {
-  gap: 0;
+.grid--center-h {
+  justify-items: center;
+}
+
+.padding-sides-2xl {
+  padding-left: var(--space-2xl);
+  padding-right: var(--space-2xl);
 }
 
 .margin-right-sm {
@@ -241,7 +249,7 @@ strong {
 
 .btn--form {
   font-family: inherit;
-  width: 90%;
+  width: 50%;
   background-color: var(--color-brown);
   color: var(--color-bg-light);
   font-weight: var(--font-weight-semibold);
@@ -252,6 +260,10 @@ strong {
   border: none;
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  grid-row: 3;
+  grid-column: 1/3;
+  margin: 0 auto;
 }
 
 .btn--form:hover {
