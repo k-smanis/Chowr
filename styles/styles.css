@@ -360,6 +360,7 @@
 .section-testimonials {
   background-color: var(--color-bg-light);
   display: flex;
+  justify-content: center;
 }
 
 .testimonials {
@@ -402,12 +403,16 @@
   justify-self: center;
   align-self: center;
   display: grid;
+  align-content: space-evenly;
+  justify-content: space-evenly;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
-  padding: var(--space-3xl) var(--space-3xl) var(--space-3xl) var(--space-xl);
+  padding: var(--space-3xl) var(--space-xl) var(--space-3xl) var(--space-xl);
 
-  max-width: 100%;
-  width: 100%;
+  max-width: 40%;
+
+  /* max-width: 100%;
+  width: 40%; */
 }
 
 .gallery-item {
