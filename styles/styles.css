@@ -359,9 +359,7 @@
 /* TESTIMONIALS */
 .section-testimonials {
   background-color: var(--color-bg-light);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* align-items: start; */
+  display: flex;
 }
 
 .testimonials {
@@ -376,7 +374,6 @@
 .testimonials-container {
   justify-self: center;
   padding: var(--space-3xl) var(--space-xl) var(--space-3xl) var(--space-3xl);
-  /* grid-template-columns: minmax(auto, 30rem) 1fr; */
   grid-template-columns: repeat(2, 1fr);
 }
 
